@@ -1,7 +1,6 @@
-let timer = 300; // 5分 == 300秒
+let timer = 300; // 5分（300秒）
 let intervalId = null;
 const timerDisplay = document.getElementById("timer");
-const alertBox = document.getElementById("alert");
 
 // 時間をフォーマットする関数
 function formatTime(seconds) {
@@ -25,7 +24,8 @@ document.getElementById("start").addEventListener("click", () => {
             } else {
                 clearInterval(intervalId);
                 intervalId = null;
-                alertBox.classList.remove("hidden");
+                // 5分経過時にブラウザのアラートを表示
+                alert("お疲れさまです、5分経過しました! \n\n以下に回答してください。\n- 見てどう思った？\n- 3つ覚えたことを教えて？");
             }
         }, 1000);
     }
@@ -43,7 +43,6 @@ document.getElementById("reset").addEventListener("click", () => {
     intervalId = null;
     timer = 300;
     updateTimer();
-    alertBox.classList.add("hidden");
 });
 
 // 初期表示の更新
