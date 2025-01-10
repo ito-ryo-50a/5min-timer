@@ -1,4 +1,4 @@
-let timer = 300; // 5分 = 300秒
+let timer = 300; // 5分 == 300秒
 let intervalId = null;
 const timerDisplay = document.getElementById("timer");
 const alertBox = document.getElementById("alert");
